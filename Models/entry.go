@@ -20,7 +20,6 @@ type Entry struct {
 func init() {
 	config.Connect()
 	db = config.GetDB()
-	db.AutoMigrate(&Entry{})
 }
 
 func (e *Entry) CreateEntry() *Entry {
